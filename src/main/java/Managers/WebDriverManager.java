@@ -21,7 +21,7 @@ public class WebDriverManager {
     private WebDriver createDriver(){
         switch (webDriverType){
             case "CHROME":
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
                 driver = new ChromeDriver();
                 break;
 
