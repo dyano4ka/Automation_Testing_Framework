@@ -21,13 +21,14 @@ public class WebDriverManager {
     private WebDriver createDriver(){
         switch (webDriverType){
             case "CHROME":
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
                 driver = new ChromeDriver();
                 break;
 
             case "FIREFOX":
                 System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geckodriver");
                 driver = new FirefoxDriver();
+                driver.manage().window().maximize();
                 break;
             default:
                 System.out.println("Optiunea de Web Driver indicata nu este valabila! Mai incearca!");
